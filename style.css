@@ -1,0 +1,145 @@
+*, ::before, :after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --red-color: #AC3931;
+    --lightred-color: #D94D44;
+    --shadowred-color: #692924;
+    --hover-color: #8d2720;
+    --black-color: #121212;
+    --white-color: #FFFAFF;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    font-family: 'Press Start 2P', cursive;
+    background: var(--black-color);
+    color: var(--white-color);
+}
+
+.navbar {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    background: var(--red-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.title-font {
+    font-size: 15px;
+    width: 40%;
+
+    color: transparent;
+    background: var(--shadowred-color);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 1.5px 0px #FFF;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+}
+
+#input-text {
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 15px;
+    background: var(--lightred-color);
+    box-shadow: 0px 1px 1px 2px var(--shadowred-color);
+    color: white;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#input-submit {
+    height: auto;
+    width: auto;
+    border: none;
+    border-radius: 15px;
+    background: var(--lightred-color);
+    box-shadow: 0px 0px 1px 2px var(--shadowred-color);
+    color: white;
+    padding: 10px;
+}
+
+#input-submit:hover {
+    background: var(--hover-color) ;
+}
+
+
+/* MAIN */
+  
+main {
+    margin-top: 30px;
+}
+
+.search-card  {
+    width: 100%;
+    height: 150px;
+    background: var(--red-color);
+    display: flex;
+}
+
+.search-img {
+    width: 40%;
+    height: 100%;
+    background: var(--lightred-color);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 0px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-img img {
+    width: 90%;
+    height: auto;
+}
+
+.search-desc {
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.search-name {
+    width: 90%;
+    height: 25px;
+    border-radius: 15px;
+    margin-top: 5px;
+    background: var(--lightred-color);
+    box-shadow: 0px 0px 1px 2px var(--shadowred-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#search-name-text {
+    font-size: 15px;
+
+}
+
+.search-type {
+    width: 90%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
