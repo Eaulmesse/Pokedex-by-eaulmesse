@@ -102,28 +102,32 @@ main {
     justify-content: center;
     align-items: center;
 }
-.search-img img {
-    width: 90%;
-    height: auto;
+#search-img-background {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .search-desc {
     width: 60%;
-    height: auto;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 
 
 .search-name {
     width: 90%;
-    height: 25px;
+    height: 50px;
     border-radius: 15px;
     margin-top: 5px;
     background: var(--lightred-color);
-    box-shadow: 0px 0px 1px 2px var(--shadowred-color);
+    box-shadow: 0px 0px 1px 1px var(--shadowred-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,11 +139,85 @@ main {
 }
 
 .search-type {
+    margin-top: 5px;
     width: 90%;
     height: 30px;
     display: flex;
     justify-content: space-between;
+    font-size: 8px;
+    text-shadow: 0px 1.5px 0px rgb(43, 28, 28);
 }
 
+
+.search-type-one {
+    width: 50%;
+    height: 50px;
+    background: var(--lightred-color);
+    box-shadow: 0px 0px 1px 1px var(--shadowred-color);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-number {
+    width: 30%;
+    height: 50px;
+    background: var(--lightred-color);
+    box-shadow: 0px 0px 1px 1px var(--shadowred-color);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-text {
+    margin-top: 15px;
+    width: 90%;
+    font-size: 8px;
+    line-height: 10px;
+}
+
+
+.card-all-generate {
+    width: 100%;
+    height: 100px;
+    background: var(--red-color);
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+
+@media (min-width: 992px) {
+    .title-font {
+        font-size: 25px;
+    }
+    .search-card {
+        width: 80%;
+        height: 300px;
+        margin: auto;
+        border-radius: 15px;
+    }
+    .search-img {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+    #input-text {
+        height: 50px;
+        width: 200px;
+    }
+    #input-submit {
+        height: 60px;
+        width: 60px;
+    }
+    #search-name-text {
+        font-size: 30px;
+        text-shadow: 0px 1.5px 0px rgb(43, 28, 28);
+    }
+    .search-type {
+        font-size: 20px;   
+    }
+}
 
 
