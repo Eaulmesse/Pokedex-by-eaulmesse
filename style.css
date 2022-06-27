@@ -14,8 +14,8 @@
 }
 
 body {
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 100%;
     font-family: 'Press Start 2P', cursive;
     background: var(--black-color);
     color: var(--white-color);
@@ -184,10 +184,69 @@ main {
     height: 100px;
     background: var(--red-color);
     display: flex;
-    flex-direction: column;
     margin-top: 80px;
 }
+.card-all-background {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
+.card-all-desc {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-all-name {
+    width: 90%;
+    height: 40px;
+    border-radius: 15px;
+    margin-top: 5px;
+    background: var(--lightred-color);
+    box-shadow: 0px 0px 1px 1px var(--shadowred-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-all-type-number {
+    width: 90%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    text-shadow: 0px 1.5px 0px rgb(43, 28, 28);
+    margin-bottom: 10px;
+}
+
+.card-all-type{
+    width: 50%;
+    height: 30px;
+    background: var(--lightred-color);
+    box-shadow: 0px 0px 1px 1px var(--shadowred-color);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-all-number {
+    width: 30%;
+    height: 30px;
+    background: var(--lightred-color);
+    box-shadow: 0px 0px 1px 1px var(--shadowred-color);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media (min-width: 992px) {
     .title-font {
@@ -217,6 +276,23 @@ main {
     }
     .search-type {
         font-size: 20px;   
+    }
+
+
+    .card-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .card-all-generate {
+        width: 80%;
+        border-radius: 15px;
+        height: 200px;
+        background: var(--red-color);
+        display: flex;
+        margin-top: 80px;
     }
 }
 

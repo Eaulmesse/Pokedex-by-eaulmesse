@@ -2,5 +2,5 @@
 
 ###
 
-GET https://pokebuildapi.fr/api/v1/pokemon/Gruikui     HTTP/1.1 
+GET https://pokebuildapi.fr/api/v1/pokemon/limit/151    HTTP/1.1 
 content-type : application/json
