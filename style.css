@@ -5,8 +5,8 @@
 }
 
 :root {
-    --red-color: #AC3931;
-    --lightred-color: #D94D44;
+    --red-color: #912f28;
+    --lightred-color: #bb453c;
     --shadowred-color: #692924;
     --hover-color: #8d2720;
     --black-color: #121212;
@@ -245,7 +245,7 @@ main {
     height: 30px;
     display: flex;
     justify-content: space-between;
-    font-size: 10px;
+    font-size: 15px;
     text-shadow: 0px 1.5px 0px rgb(43, 28, 28);
     margin-bottom: 10px;
 }
