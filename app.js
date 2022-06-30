@@ -10,7 +10,7 @@ const searchHP = document.querySelector("#search-hp");
 
 
 
-let url;
+let url = "https://pokebuildapi.fr/api/v1/pokemon/25";
 
 searchSubmit.addEventListener('click', (e)=> {
     e.preventDefault();
@@ -95,23 +95,27 @@ function createCard(ImgBackground,name,type,number) {
     globalCardTypeNumber.appendChild(globalCardNumber);
 
 
-    return globalCard;
+    globalCardName.addEventListener("click", (e)=> {
+        console.log(e);
+        url = `https://pokebuildapi.fr/api/v1/pokemon/${e.target.textContent}`;
+        getPokemon();
+
+
+    });
+
 }
 
 const selectGen = document.getElementById('gen-select');
-let urlGen;
+let urlGen = "https://pokebuildapi.fr/api/v1/pokemon/generation/1" ;
 
 selectGen.addEventListener("change", ()=> {
+    
     urlGen = `https://pokebuildapi.fr/api/v1/pokemon/generation/${selectGen.value}`
-   
     globalSection.innerHTML = '';
     getList();
    
-
-
-
-    
 })
+
 
 
 function getList() {
@@ -122,11 +126,15 @@ function getList() {
     ).then(data => {
         console.log(data);
 
-
         for (let pokemon of data) {
             createCard(pokemon.image,pokemon.name,pokemon.apiTypes[0].name,pokemon.id)
-            
         }
     })
 }
+
+getPokemon();
+getList();
+
+
+
 
