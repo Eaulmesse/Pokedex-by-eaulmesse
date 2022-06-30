@@ -18,10 +18,8 @@ searchSubmit.addEventListener('click', (e)=> {
     if (searchInput.value !== "") {
         url = `https://pokebuildapi.fr/api/v1/pokemon/${searchInput.value}`;
         getPokemon();
-        console.log("1");
     } else {
         searchName.textContent = "Error";
-        console.log("2");
     }
     
 })
@@ -45,33 +43,39 @@ function getPokemon() {
     })
 }
 
+const globalSection = document.querySelector('.card-list');
+let globalCard;
+let globalCardImg;
+let globalCardBackground;
+let globalCardDesc;
+let globalCardName
 
 let btnTest = document.getElementById('test');
 
 function createCard(ImgBackground,name,type,number) {
-    let globalSection = document.querySelector('.card-list');
+   
 
 
-    let globalCard = document.createElement('div');
+    globalCard = document.createElement('div');
     globalCard.classList.add("card-all-generate");
     globalSection.appendChild(globalCard);
     
 
 
-    let globalCardImg = document.createElement('div');
-    globalCardImg.classList.add("search-img");
+    globalCardImg = document.createElement('div');
+    globalCardImg.classList.add("card-all-img");
     globalCard.appendChild(globalCardImg);
 
-    let globalCardBackground = document.createElement('div');
+    globalCardBackground = document.createElement('div');
     globalCardBackground.classList.add("card-all-background");
     globalCardBackground.style.backgroundImage = `url(${ImgBackground})`;
     globalCardImg.appendChild(globalCardBackground);
 
-    let globalCardDesc = document.createElement('div');
+    globalCardDesc = document.createElement('div');
     globalCardDesc.classList.add("card-all-desc");
     globalCard.appendChild(globalCardDesc);
 
-    let globalCardName = document.createElement('div');
+    globalCardName = document.createElement('div');
     globalCardName.classList.add("card-all-name");
     globalCardName.textContent = name;
     globalCardDesc.appendChild(globalCardName);
@@ -89,6 +93,9 @@ function createCard(ImgBackground,name,type,number) {
     globalCardNumber.classList.add("card-all-number");
     globalCardNumber.textContent = "n° " + number;
     globalCardTypeNumber.appendChild(globalCardNumber);
+
+
+    return globalCard;
 }
 
 const selectGen = document.getElementById('gen-select');
@@ -96,7 +103,14 @@ let urlGen;
 
 selectGen.addEventListener("change", ()=> {
     urlGen = `https://pokebuildapi.fr/api/v1/pokemon/generation/${selectGen.value}`
+   
+    globalSection.innerHTML = '';
     getList();
+   
+
+
+
+    
 })
 
 
@@ -110,7 +124,6 @@ function getList() {
 
 
         for (let pokemon of data) {
-            console.log(pokemon.apiTypes[0].name);
             createCard(pokemon.image,pokemon.name,pokemon.apiTypes[0].name,pokemon.id)
             
         }
