@@ -22,6 +22,10 @@ body {
     overflow-x: hidden;
 }
 
+label {
+    display: none;
+}
+
 .navbar {
     margin-top: 15px;
     width: 100%;
